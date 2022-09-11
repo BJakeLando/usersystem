@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration System</title>
+</head>
+<body>
+    <header>
+        <h1>My Awesome User Registration System!</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+
+        </nav>
+
+
+    </header>
+
+    <main>
+        <h2>Register a new user</h2>
+        <div class="form-container">
+            <!-- name, age, gender, address, phone, email, password, color -->
+            <div class="input-container">
+                <label>Email: </label>
+                <input type="email" id="userEmail">
+            </div>  
+            <div class="input-container">
+                <label>Password: </label>
+                <input type="password" id="userPassword">
+            </div>  
+            <div class="input-container">
+                <label>First Name: </label>
+                <input type="text" id="userFirstName">
+            </div> 
+            <div class="input-container">
+                <label>Last Name: </label>
+                <input type="text" id="userLastName">
+            </div> 
+            <div class="input-container">
+                <label>Age: </label>
+                <input type="number" id="userAge">
+            </div>
+            <div class="input-container">
+                <label>Gender: </label>
+                <input type="text" id="userGender">
+            </div>  
+            <div class="input-container">
+                <label>Address: </label>
+                <input type="address" id="userAddress">
+            </div>  
+            <div class="input-container">
+                <label>Phone: </label>
+                <input type="number" id="userPhone">
+            </div>  
+            <div class="input-container">
+                <label>Color: </label>
+                <input type="color" id="userColor">
+            </div>  
+            <div class="input-container">
+                <label>Payment Method: </label>
+                <input type="text" id="userPay">
+            </div> 
+            <button onclick="register()">Register</button>
+                     
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="scripts/register.js"></script>
+
+</body>
+</html>

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration System</title>
+    <link rel="stylesheet" href="styles/mystyle.css">
 </head>
 <body>
-    <header>
+    <header class ="site-header">
         <h1>My Awesome User Registration System!</h1>
 
         <nav>
@@ -21,7 +22,11 @@
 
     <main>
         <h2>Register a new user</h2>
+        <button id="btnShowForm">👀</button>
         <div class="form-container">
+            <div class="flex-btn">
+                <button id="btnCloseForm">❌</button>
+            </div>
             <!-- name, age, gender, address, phone, email, password, color -->
             <div class="input-container">
                 <label>Email: </label>
@@ -61,9 +66,15 @@
             </div>  
             <div class="input-container">
                 <label>Payment Method: </label>
-                <input type="text" id="userPay">
+                <select type="text" id="userPay">
+                    <option value="text">  </option>
+                    <option value="text">Cash</option>
+                    <option value="text">Card</option>
+                    <option value="text">Check</option>
+
+                </select>
             </div> 
-            <button onclick="register()">Register</button>
+            <button class="btn" id="btnSave">Register</button>
                      
         </div>
 
@@ -73,6 +84,7 @@
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="scripts/storeManager.js"></script>
     <script src="scripts/register.js"></script>
 
 </body>

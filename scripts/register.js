@@ -18,6 +18,18 @@ function User(email,pasword,firstName,lastName,age, gender,address, phone,color,
 //getting the values from the inputs
 
 
+function isValid(aUser){
+    let valid = true;
+
+    if(aUser.email == "" || aUser.password=="" || aUser.name == "" ){
+        valid=false;
+        alert("Please enter an email");
+    }
+
+    return valid;
+
+}
+
 function register() {
     let txtFirstName =$("#userFirstName").val();
     let txtLastName= $("#userLastName").val();
@@ -28,22 +40,44 @@ function register() {
     let txtAddress= $("#userAddress").val();
     let txtPhone= $("#userPhone").val();
     let selColor= $("#userColor").val();
-    let txtPayment= $("#userPay").val();
-    console.log(txtEmail,txtPassword,txtFirstName,txtLastName,txtAge,txtGender, txtAddress,txtPhone,selColor,txtPayment);
+    let selPayment= $("#userPay").val();
+    console.log(txtEmail,txtPassword,txtFirstName,txtLastName,txtAge,txtGender, txtAddress,txtPhone,selColor,selPayment);
 
     
 //create the user ob
-    let aUser = new User(txtEmail,txtPassword,txtFirstName,txtLastName,txtAge,txtGender,txtAddress,txtPhone,selColor,txtPayment);
+    let aUser = new User(txtEmail,txtPassword,txtFirstName,txtLastName,txtAge,txtGender,txtAddress,txtPhone,selColor,selPayment);
 
-    console.log(aUser);
+    if(isValid(aUser)){
+    saveUser(aUser);
     //clear the inputs 
     $("input").val("");
-
+}
 }
 
-//create the user ob
+
 
 function init(){
     //hook event
+    $("#btnSave").on("click",register);
+    $("h1").on("click",function(){
+        $("nav").hide();
+    });
+
+    $(".form-container").hide();
+    $("#btnShowForm").on("click",function(){
+        //$(".form-container").show();
+        $(".form-container").slideDown(2000);
+    
+    });
+
+    $(".form-container").hide();
+    $("#btnCloseForm").on("click",function(){
+        //$(".form-container").show();
+        $(".form-container").slideUp(1000);
+    
+    });
+
 
 }
+
+window.onload=init;

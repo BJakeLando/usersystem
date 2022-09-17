@@ -75,3 +75,25 @@ h2{
     font-size: 16px;
 }
 
+.table-container{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size:0.9em;
+    min-width: 600px;
+    border: solid black;
+
+}
+
+.table-container thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    border: solid black;
+}
+
+.tabel-container th, td {
+    padding: 12px 15px;
+    border: solid black;
+}
+

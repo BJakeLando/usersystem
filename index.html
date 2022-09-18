@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User registration system</title>
+    <link rel="stylesheet" href="styles/mystyle.css">
 </head>
 <body>
     <header>
@@ -20,8 +21,16 @@
 
     <main>
         <h2>Log into the system</h2>
-        <div>
-
+        <div input class="form-container">
+            <p id="alert-error" class="">Invalid Credentials</p>
+            <div input-container>
+            <input type="text" id ="userName" placeholder="Enter your username">
+            </div>
+            <div class="input-container">
+            <input type="password" id="userPassword" placeholder="Enter your password">
+            </div>
+            <button id="loginBtn">Login</button>
+            
 
         </div>
 
@@ -29,6 +38,9 @@
     </main>
     
     <footer>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/storeManager.js"></script>
+        <script src="scripts/login.js"></script>
         
     </footer>
     
